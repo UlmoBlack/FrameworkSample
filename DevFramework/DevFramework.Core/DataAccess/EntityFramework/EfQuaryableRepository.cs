@@ -18,7 +18,8 @@ namespace DevFramework.Core.DataAccess.EntityFramework
             _context = context;
         }
 
-        public IQueryable<T> Table => this.Entities; // Table çağırıldığında this.Entities return edilecek
+        public IQueryable<T> Table =>  this.Entities;      // Table çağırıldığında this.Entities return edilecek
+        
         //{
         //    get
         //    {

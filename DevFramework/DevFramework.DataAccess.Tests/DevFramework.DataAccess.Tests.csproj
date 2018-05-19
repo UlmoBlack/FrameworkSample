@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFrameworkTests\EntityFrameworkTests.cs" />
+    <Compile Include="NHibernateTests\NhibernateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

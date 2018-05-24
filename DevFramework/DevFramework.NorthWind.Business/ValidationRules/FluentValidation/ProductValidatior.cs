@@ -12,7 +12,7 @@ namespace DevFramework.Northwind.Business.ValidationRules.FluentValidation
     {
         public ProductValidatior()
         {
-            CascadeMode = CascadeMode.StopOnFirstFailure;
+           // CascadeMode = CascadeMode.StopOnFirstFailure;
             RuleFor(p => p.CategoryId).NotEmpty();
             RuleFor(p => p.ProductName).NotEmpty();
             RuleFor(p => p.UnitPrice).GreaterThan(0);

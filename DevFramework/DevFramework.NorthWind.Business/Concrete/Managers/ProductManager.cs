@@ -1,8 +1,8 @@
 ﻿using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DevFramework.Northwind.DataAccess.Abstract;
 using DevFramework.Northwind.Entities.Concrete;
-using DevFramework.NorthWind.Business.Abstract;
-using DevFramework.NorthWind.Business.ValidationRules.FluentValidation;
+using DevFramework.Northwind.Business.Abstract;
+using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DevFramework.Core.Aspects.Postsharp;
 
-namespace DevFramework.NorthWind.Business.Concrete.Managers
+namespace DevFramework.Northwind.Business.Concrete.Managers
 {
-    class ProductManager : IProductService
+    public class ProductManager : IProductService
     {
 
         private IProductDal _ProductDal;
@@ -29,11 +29,12 @@ namespace DevFramework.NorthWind.Business.Concrete.Managers
             return _ProductDal.Add(product);
         }
 
+        [FluentValidationAspect(typeof(ProductValidatior))]
         public List<Product> GetAll()
         {
             return _ProductDal.GetList();
         }
-
+        [FluentValidationAspect(typeof(ProductValidatior))]
         public Product GetById(int id)
         {
             return _ProductDal.Get(p => p.ProductId == id);

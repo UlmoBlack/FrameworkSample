@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.NorthWind.Business.ValidationRules.FluentValidation
+namespace DevFramework.Northwind.Business.ValidationRules.FluentValidation
 {
     public class ProductValidatior :AbstractValidator<Product>
     {
         public ProductValidatior()
         {
+            CascadeMode = CascadeMode.StopOnFirstFailure;
             RuleFor(p => p.CategoryId).NotEmpty();
             RuleFor(p => p.ProductName).NotEmpty();
             RuleFor(p => p.UnitPrice).GreaterThan(0);

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.NorthWind.Business.Abstract
+namespace DevFramework.Northwind.Business.Abstract
 {
     public interface IProductService
     {

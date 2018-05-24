@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation
     {
         public static void FluentValidate(IValidator validator, object entity)
         {
-            var result = validator.Validate(entity);
+            var result = validator.Validate(entity) ;
+
 
             if(result.Errors.Count> 0)
             {

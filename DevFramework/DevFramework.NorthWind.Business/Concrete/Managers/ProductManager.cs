@@ -9,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DevFramework.Core.Aspects.Postsharp;
+using System.Transactions;
+using DevFramework.Core.Aspects.Postsharp.ValidationAspects;
+using DevFramework.Core.Aspects.Postsharp.TransactionAspects;
+using DevFramework.Core.Aspects.Postsharp.CacheAspects;
+using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
@@ -23,13 +28,14 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidatior(), product);
             return _ProductDal.Add(product);
         }
 
-        [FluentValidationAspect(typeof(ProductValidatior))]
+        [CacheAspect(typeof(MemoryCacheManager), 120)]
         public List<Product> GetAll()
         {
             return _ProductDal.GetList();
@@ -40,10 +46,21 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
             return _ProductDal.Get(p => p.ProductId == id);
         }
 
-       // [FluentValidationAspect(typeof(ProductValidatior))]
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product prudct1, Product product2)
+        {
+
+            _ProductDal.Add(prudct1);
+            _ProductDal.Update(product2);
+
+
+
+        }
+
+        // [FluentValidationAspect(typeof(ProductValidatior))]
         public Product Update(Product product)
         {
-           // ValidatorTool.FluentValidate(new ProductValidatior(), product);
+            // ValidatorTool.FluentValidate(new ProductValidatior(), product);
             return _ProductDal.Update(product);
         }
     }

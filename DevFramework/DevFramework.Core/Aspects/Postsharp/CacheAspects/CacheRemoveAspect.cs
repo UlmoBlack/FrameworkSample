@@ -18,7 +18,7 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
 
         public CacheRemoveAspect(Type cacheType)
         {
-
+            _cacheType = cacheType;
         }
 
         public CacheRemoveAspect(string pattern, Type cacheType)

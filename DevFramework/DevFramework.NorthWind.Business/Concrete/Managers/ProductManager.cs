@@ -45,7 +45,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager), 120)]
         [PerformanceCounterAspect(2)]
-        [SecuriedOperation(Roles="Admin,Editor")]
+        [SecuriedOperation(Roles="Admin,Editor,Student")]
         public List<Product> GetAll()
         {
             Thread.Sleep(3000);

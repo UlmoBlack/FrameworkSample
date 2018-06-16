@@ -13,6 +13,8 @@ using DevFramework.Core.DataAccess.EntityFramework;
 using System.Data.Entity;
 using DevFramework.Core.DataAccess.NHibernate;
 using DevFramework.Northwind.DataAccess.Concrete.NHibernate.Helpers;
+using DevFramework.NorthWind.Business.Abstract;
+using DevFramework.NorthWind.Business.Concrete.Managers;
 
 namespace DevFramework.NorthWind.Business.DependencyResolvers.Ninject
 {
@@ -21,7 +23,9 @@ namespace DevFramework.NorthWind.Business.DependencyResolvers.Ninject
         public override void Load()
         {
             Bind<IProductService>().To<ProductManager>().InSingletonScope();
-            Bind<IProductDal>().To<EfProductDal>(); 
+            Bind<IProductDal>().To<EfProductDal>().InSingletonScope();
+            Bind<IUserService>().To<UserManager>();
+            Bind<IUserDal>().To<EfUserDal>();
 
             Bind(typeof(IQueryableRepository<>)).To(typeof(EfQuaryableRepository<>));
             Bind<DbContext>().To<NorthwindContext>();

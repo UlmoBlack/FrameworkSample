@@ -7,9 +7,9 @@ using log4net;
 
 namespace DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers
 {
-    public class FİleLogger : LoggerService
+    public class FileLogger : LoggerService
     {
-        public FİleLogger() : base(LogManager.GetLogger("JsonFileLogger"))
+        public FileLogger() : base(LogManager.GetLogger("JsonFileLogger"))
         {
         }
     }

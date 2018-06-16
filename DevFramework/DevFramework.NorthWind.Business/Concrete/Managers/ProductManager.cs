@@ -16,9 +16,13 @@ using DevFramework.Core.Aspects.Postsharp.CacheAspects;
 using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using DevFramework.Core.Aspects.Postsharp.LogAspects;
+using DevFramework.Core.Aspects.Postsharp.PerformanceAspects;
+using System.Threading;
+using DevFramework.Core.Aspects.Postsharp.AuthorizationAspects;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
+
     public class ProductManager : IProductService
     {
 
@@ -31,6 +35,8 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [FluentValidationAspect(typeof(ProductValidatior))]
         [CacheRemoveAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
+        [LogAspect(typeof(FileLogger))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidatior(), product);
@@ -38,10 +44,11 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager), 120)]
-        [LogAspect(typeof(DatabaseLogger))]
-        [LogAspect(typeof(FİleLogger))]
+        [PerformanceCounterAspect(2)]
+        [SecuriedOperation(Roles="Admin,Editor")]
         public List<Product> GetAll()
         {
+            Thread.Sleep(3000);
             return _ProductDal.GetList();
         }
         [FluentValidationAspect(typeof(ProductValidatior))]
@@ -51,6 +58,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         }
 
         [TransactionScopeAspect]
+        [FluentValidationAspect(typeof(ProductValidatior))]
         public void TransactionalOperation(Product prudct1, Product product2)
         {
 

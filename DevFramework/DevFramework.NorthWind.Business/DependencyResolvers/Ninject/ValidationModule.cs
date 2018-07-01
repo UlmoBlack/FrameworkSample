@@ -1,5 +1,5 @@
-﻿using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
-using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.Business.ValidationRules.FluentValidation;
+using DevFramework.NorthWind.Entities.Concrete;
 using FluentValidation;
 using Ninject.Modules;
 using System;

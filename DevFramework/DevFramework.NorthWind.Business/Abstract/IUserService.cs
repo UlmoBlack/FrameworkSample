@@ -1,5 +1,5 @@
-﻿using DevFramework.Northwind.Entities.ComplexTypes;
-using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.Entities.ComplexTypes;
+using DevFramework.NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

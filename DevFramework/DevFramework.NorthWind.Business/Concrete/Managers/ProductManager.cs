@@ -1,8 +1,8 @@
 ﻿using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.Entities.Concrete;
-using DevFramework.Northwind.Business.Abstract;
-using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.Entities.Concrete;
+using DevFramework.NorthWind.Business.Abstract;
+using DevFramework.NorthWind.Business.ValidationRules.FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,18 +19,22 @@ using DevFramework.Core.Aspects.Postsharp.LogAspects;
 using DevFramework.Core.Aspects.Postsharp.PerformanceAspects;
 using System.Threading;
 using DevFramework.Core.Aspects.Postsharp.AuthorizationAspects;
+using AutoMapper;
+using DevFramework.Core.Utilities.Mappings;
 
-namespace DevFramework.Northwind.Business.Concrete.Managers
+namespace DevFramework.NorthWind.Business.Concrete.Managers
 {
 
     public class ProductManager : IProductService
     {
 
         private IProductDal _ProductDal;
+        private IMapper _mapper;
 
-        public ProductManager(IProductDal productDal)
+        public ProductManager(IProductDal productDal,IMapper mapper)
         {
             _ProductDal = productDal;
+            _mapper = mapper;
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
@@ -45,12 +49,23 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager), 120)]
         [PerformanceCounterAspect(2)]
-        [SecuriedOperation(Roles="Admin,Editor,Student")]
+        // [SecuriedOperation(Roles="Admin,Editor,Student")]
         public List<Product> GetAll()
         {
-            Thread.Sleep(3000);
-            return _ProductDal.GetList();
+            // Thread.Sleep(3000);
+
+            //return _ProductDal.GetList().Select(p=> new Product
+            //{
+            //    CategoryId = p.CategoryId,
+            //    ProductId = p.ProductId,
+            //    ProductName =p.ProductName,
+            //    QuantityPerUnit = p.QuantityPerUnit,
+            //    UnitPrice = p.UnitPrice
+            //}).ToList();
+            List<Product> products = _mapper.Map<List<Product>>(_ProductDal.GetList());
+            return products;
         }
+
         [FluentValidationAspect(typeof(ProductValidatior))]
         public Product GetById(int id)
         {

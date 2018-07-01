@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevFramework.Northwind.Entities.Concrete;
+using DevFramework.NorthWind.Entities.Concrete;
 using FluentNHibernate.Mapping;
 using NHibernate;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate.Mappings
+namespace DevFramework.NorthWind.DataAccess.Concrete.NHibernate.Mappings
 {
     public class CategoryMap:ClassMap<Category>
     {

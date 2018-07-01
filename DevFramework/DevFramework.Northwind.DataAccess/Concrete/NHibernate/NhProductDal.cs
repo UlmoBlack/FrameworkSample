@@ -1,7 +1,7 @@
 ﻿using DevFramework.Core.DataAccess.NHibernate;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.Entities.ComplexTypes;
-using DevFramework.Northwind.Entities.Concrete;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.Entities.ComplexTypes;
+using DevFramework.NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate
+namespace DevFramework.NorthWind.DataAccess.Concrete.NHibernate
 {
     public class NhProductDal : NhEntitiyRepositoryBase<Product>, IProductDal
     {

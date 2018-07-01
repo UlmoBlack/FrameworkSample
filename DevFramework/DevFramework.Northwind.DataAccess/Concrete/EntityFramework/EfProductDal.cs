@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using DevFramework.Core.DataAccess.EntityFramework;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.Entities.ComplexTypes;
-using DevFramework.Northwind.Entities.Concrete;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.Entities.ComplexTypes;
+using DevFramework.NorthWind.Entities.Concrete;
 using System.Linq;
-namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
+namespace DevFramework.NorthWind.DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
+    public class EfProductDal : EfEntityRepositoryBase<Product, NorthWindContext>, IProductDal
     {
         public List<ProductDetail> GetProductDetails()
         {
-            using (NorthwindContext context = new NorthwindContext())
+            using (NorthWindContext context = new NorthWindContext())
             {
                 var result = from p in context.Products
                              join c in context.Categories on p.CategoryId equals c.CategoryId

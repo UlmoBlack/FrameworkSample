@@ -1,5 +1,5 @@
-﻿using DevFramework.Northwind.Business.Abstract;
-using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.Business.Abstract;
+using DevFramework.NorthWind.Entities.Concrete;
 using DevFramework.NorthWind.MVCWebUI.Models;
 using System;
 using System.Collections.Generic;

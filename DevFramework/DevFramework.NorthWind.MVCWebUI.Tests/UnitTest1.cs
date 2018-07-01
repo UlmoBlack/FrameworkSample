@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DevFramework.Northwind.MVCWebUI.Tests
+namespace DevFramework.NorthWind.MVCWebUI.Tests
 {
     [TestClass]
     public class UnitTest1

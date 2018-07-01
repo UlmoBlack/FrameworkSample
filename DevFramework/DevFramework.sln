@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Core", "DevFra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.Entities", "DevFramework.Northwind.Entities\DevFramework.Northwind.Entities.csproj", "{A996BD64-E394-4E97-96F5-6C33CB22EA05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.DataAccess", "DevFramework.Northwind.DataAccess\DevFramework.Northwind.DataAccess.csproj", "{3B2C7353-E41D-481F-B11D-070FB28069B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.NorthWind.DataAccess", "DevFramework.Northwind.DataAccess\DevFramework.NorthWind.DataAccess.csproj", "{3B2C7353-E41D-481F-B11D-070FB28069B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.NorthWind.Business", "DevFramework.NorthWind.Business\DevFramework.NorthWind.Business.csproj", "{F4D41EFF-EC11-4543-8E81-F4336E28314C}"
 EndProject

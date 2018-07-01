@@ -1,7 +1,7 @@
-﻿using DevFramework.Northwind.Business.Abstract;
-using DevFramework.Northwind.Business.Concrete.Managers;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
+﻿using DevFramework.NorthWind.Business.Abstract;
+using DevFramework.NorthWind.Business.Concrete.Managers;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.DataAccess.Concrete.EntityFramework;
 using Ninject.Modules;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using DevFramework.Core.DataAccess;
 using DevFramework.Core.DataAccess.EntityFramework;
 using System.Data.Entity;
 using DevFramework.Core.DataAccess.NHibernate;
-using DevFramework.Northwind.DataAccess.Concrete.NHibernate.Helpers;
+using DevFramework.NorthWind.DataAccess.Concrete.NHibernate.Helpers;
 using DevFramework.NorthWind.Business.Abstract;
 using DevFramework.NorthWind.Business.Concrete.Managers;
 
@@ -28,7 +28,7 @@ namespace DevFramework.NorthWind.Business.DependencyResolvers.Ninject
             Bind<IUserDal>().To<EfUserDal>();
 
             Bind(typeof(IQueryableRepository<>)).To(typeof(EfQuaryableRepository<>));
-            Bind<DbContext>().To<NorthwindContext>();
+            Bind<DbContext>().To<NorthWindContext>();
             Bind<NHibernateHelper>().To<SqlServerHelper>();
         }
     }

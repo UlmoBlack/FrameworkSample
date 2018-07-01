@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DevFramework.DataAccess;
-using DevFramework.Northwind.DataAccess.Concrete.NHibernate;
-using DevFramework.Northwind.DataAccess.Concrete.NHibernate.Helpers;
+using DevFramework.NorthWind.DataAccess.Concrete.NHibernate;
+using DevFramework.NorthWind.DataAccess.Concrete.NHibernate.Helpers;
 
 namespace DevFramework.DataAccess.Tests.NhibernateTests
 {

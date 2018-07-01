@@ -1,15 +1,15 @@
 ﻿using DevFramework.Core.DataAccess.EntityFramework;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.Entities.Concrete;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
+namespace DevFramework.NorthWind.DataAccess.Concrete.EntityFramework
 {
-    public class EFCategoryDal:EfEntityRepositoryBase<Category,NorthwindContext>, ICategoryDal
+    public class EFCategoryDal:EfEntityRepositoryBase<Category,NorthWindContext>, ICategoryDal
     {
 
     }

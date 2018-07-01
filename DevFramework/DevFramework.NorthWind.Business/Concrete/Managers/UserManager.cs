@@ -1,13 +1,13 @@
-﻿using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
-using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.DataAccess.Concrete.EntityFramework;
+using DevFramework.NorthWind.Entities.Concrete;
 using DevFramework.NorthWind.Business.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevFramework.Northwind.DataAccess.Abstract;
-using DevFramework.Northwind.Entities.ComplexTypes;
+using DevFramework.NorthWind.DataAccess.Abstract;
+using DevFramework.NorthWind.Entities.ComplexTypes;
 
 namespace DevFramework.NorthWind.Business.Concrete.Managers
 {

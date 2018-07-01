@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace DevFramework.Northwind.WebApi
+namespace DevFramework.NorthWind.WebApi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

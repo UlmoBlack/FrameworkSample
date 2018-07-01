@@ -11,7 +11,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 
-namespace DevFramework.Northwind.MVCWebUI
+namespace DevFramework.NorthWind.MVCWebUI
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -20,7 +20,7 @@ namespace DevFramework.Northwind.MVCWebUI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(new BusinessModule()));
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(new BusinessModule(), new AutoMapperModule()));
 
         }
 

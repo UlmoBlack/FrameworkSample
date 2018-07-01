@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DevFramework.Northwind.MVCWebUI.Tests")]
+[assembly: AssemblyTitle("DevFramework.NorthWind.MVCWebUI.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DevFramework.Northwind.MVCWebUI.Tests")]
+[assembly: AssemblyProduct("DevFramework.NorthWind.MVCWebUI.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

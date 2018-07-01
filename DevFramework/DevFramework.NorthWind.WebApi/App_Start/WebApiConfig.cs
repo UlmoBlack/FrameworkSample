@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace DevFramework.Northwind.WebApi
+namespace DevFramework.NorthWind.WebApi
 {
     public static class WebApiConfig
     {

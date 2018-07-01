@@ -1,5 +1,5 @@
-﻿using DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
-using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.DataAccess.Concrete.EntityFramework.Mappings;
+using DevFramework.NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
+namespace DevFramework.NorthWind.DataAccess.Concrete.EntityFramework
 {
-    public class NorthwindContext: DbContext
+    public class NorthWindContext: DbContext
     {
-        public NorthwindContext()
+        public NorthWindContext()
         {
-            Database.SetInitializer<NorthwindContext>(null);
+            Database.SetInitializer<NorthWindContext>(null);
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }

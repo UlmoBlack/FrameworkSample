@@ -113,9 +113,9 @@
       <Project>{F4D41EFF-EC11-4543-8E81-F4336E28314C}</Project>
       <Name>DevFramework.NorthWind.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DevFramework.Northwind.DataAccess\DevFramework.Northwind.DataAccess.csproj">
+    <ProjectReference Include="..\DevFramework.Northwind.DataAccess\DevFramework.NorthWind.DataAccess.csproj">
       <Project>{3B2C7353-E41D-481F-B11D-070FB28069B4}</Project>
-      <Name>DevFramework.Northwind.DataAccess</Name>
+      <Name>DevFramework.NorthWind.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevFramework.Northwind.Entities\DevFramework.Northwind.Entities.csproj">
       <Project>{A996BD64-E394-4E97-96F5-6C33CB22EA05}</Project>

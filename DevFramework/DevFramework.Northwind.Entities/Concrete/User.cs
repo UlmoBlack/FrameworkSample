@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.Northwind.Entities.Concrete
+namespace DevFramework.NorthWind.Entities.Concrete
 {
     public class User :IEntity
     {

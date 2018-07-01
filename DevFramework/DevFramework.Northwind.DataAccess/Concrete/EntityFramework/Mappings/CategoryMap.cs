@@ -1,4 +1,4 @@
-﻿using DevFramework.Northwind.Entities.Concrete;
+﻿using DevFramework.NorthWind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings
+namespace DevFramework.NorthWind.DataAccess.Concrete.EntityFramework.Mappings
 {
     public class CategoryMap : EntityTypeConfiguration<Category>
     {

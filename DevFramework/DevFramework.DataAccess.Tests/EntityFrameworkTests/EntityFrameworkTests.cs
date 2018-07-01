@@ -1,5 +1,5 @@
 ﻿using System;
-using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
+using DevFramework.NorthWind.DataAccess.Concrete.EntityFramework;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DevFramework.DataAccess;
 namespace DevFramework.DataAccess.Tests.EntityFrameworkTests

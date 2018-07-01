@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace DevFramework.Northwind.MVCWebUI
+namespace DevFramework.NorthWind.MVCWebUI
 {
     public class RouteConfig
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevFramework.Northwind.Entities.ComplexTypes
+namespace DevFramework.NorthWind.Entities.ComplexTypes
 {
     public class ProductDetail
     {
